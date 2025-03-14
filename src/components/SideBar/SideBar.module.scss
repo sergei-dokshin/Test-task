@@ -1,0 +1,85 @@
+.sidebar {
+  grid-area: sidebar;
+  background: var(--bg-color-main);
+  border-right: 1px solid var(--border-color);
+
+  .sidebarHead {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid gray;
+
+    .projectInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: #bdbdbd;
+      margin-left: 10px;
+
+      .projectName {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .projectAbbrv {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+
+    .chevronDown {
+      margin-right: 20px;
+      scale: 0.85;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--bg-color-hover);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .sidebarMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+
+    .menuButton {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 18px;
+      line-height: 1;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--bg-color-hover);
+      }
+
+      p {
+        margin: 0 0 0 20px;
+      }
+
+      i {
+        margin-left: 20px;
+      }
+    }
+
+    .activeTab {
+      background-color: var(--bg-color-hover);
+    }
+  }
+}

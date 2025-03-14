@@ -1,0 +1,15 @@
+.mainContent {
+  grid-area: main;
+  background: var(--bg-color-main);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid gray;
+  padding-left: 20px;
+  font-size: 20px;
+}

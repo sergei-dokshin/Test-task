@@ -1,0 +1,19 @@
+.tableHeader {
+  display: grid;
+  grid-template-columns: minmax(70px, 1fr) 3fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: #333;
+  padding: 8px;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+
+  > div {
+    padding: 8px;
+    line-height: 0.8;
+    font-size: 16px;
+    color: var(--font-color-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

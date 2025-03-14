@@ -1,0 +1,91 @@
+/* Колонка с иконками */
+.treeColumn {
+  padding-left: calc(var(--level) * 20px);
+}
+
+/* Блок для отрисовки дерева */
+.treeIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 50px;
+  padding: 5px 10px 10px 10px;
+  border-radius: 5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -67%;
+    left: -4px;
+    width: 1px;
+    height: 100%;
+    scale: 1.35;
+    background-color: #888;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    width: 15px;
+    height: 1px;
+    background-color: #888;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .trashIcon {
+      visibility: visible;
+    }
+  }
+
+  &.root {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  &.isLast::before {
+    height: 100%;
+  }
+}
+
+/* Иконки */
+.trashIcon {
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  scale: 1.2;
+  color: rgb(143, 0, 0);
+
+  &:hover {
+    color: rgb(219, 1, 1);
+  }
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+  left: -2px;
+  cursor: pointer;
+  color: #26c2fb;
+  scale: 1.4;
+  z-index: 8;
+
+  &:hover {
+    color: #88dfff;
+  }
+
+  &.inactive {
+    opacity: 50%;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.tableBody {
+  display: flex;
+  flex-direction: column;
+
+  .treeIconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root {
+    .icon {
+      position: relative;
+      top: 5px;
+      left: -2px;
+      cursor: pointer;
+      color: #26c2fb;
+      z-index: 8;
+      padding: 15px;
+
+      &:hover {
+        color: #88dfff;
+      }
+    }
+  }
+}

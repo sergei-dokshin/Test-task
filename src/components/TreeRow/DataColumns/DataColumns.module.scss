@@ -1,0 +1,26 @@
+.rowInput {
+  background-color: var(--bg-color-dark);
+  color: #ffffff;
+  text-align: left;
+  border: 1px solid #555;
+  border-radius: 4px;
+  width: 90%;
+  padding: 4px 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #888;
+  }
+
+  &::placeholder {
+    color: var(--font-color-gray);
+  }
+}
+
+.dataCell {
+  font-size: 16px;
+  padding: 0 8px;
+}
+
